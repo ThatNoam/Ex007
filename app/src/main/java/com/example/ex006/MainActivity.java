@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import kotlin.random.Random
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +27,19 @@ int rand = 0;
     }
 
     public void clicked(View view) {
+        rand = (int) ((Math.random() * 3) + 1);
 
+        if (rand == 1)
+        {
+            myImageView.setImageResource(R.drawable.pic1);
+        }
+        if (rand == 2)
+        {
+            myImageView.setImageResource(R.drawable.pic2);
+        }
+        if (rand == 3)
+        {
+            myImageView.setImageResource(R.drawable.pic3);
+        }
     }
 }
