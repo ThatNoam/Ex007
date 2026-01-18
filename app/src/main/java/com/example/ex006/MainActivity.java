@@ -15,6 +15,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
 Button btn;
+ImageView img;
 int rand = 0;
 
     @Override
@@ -22,8 +23,8 @@ int rand = 0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn = findViewById(R.layout.activity_main);
-
+        btn = findViewById(R.id.btn);
+        img = findViewById(R.id.img);
     }
 
     public void clicked(View view) {
@@ -31,15 +32,15 @@ int rand = 0;
 
         if (rand == 1)
         {
-            myImageView.setImageResource(R.drawable.pic1);
+            img.setImageResource(R.drawable.pic1);
         }
         if (rand == 2)
         {
-            myImageView.setImageResource(R.drawable.pic2);
+            img.setImageResource(R.drawable.pic2);
         }
         if (rand == 3)
         {
-            myImageView.setImageResource(R.drawable.pic3);
+            img.setImageResource(R.drawable.pic3);
         }
     }
 }
